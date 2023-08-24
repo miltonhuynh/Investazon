@@ -10,14 +10,30 @@ function Header() {
                 <input className="headerSearchInput" type="text" />
             </div>
             <div className="headerNav">
-                <div className="headerOption">
 
+                <div className="headerOption">
+                    <span className="headerOptionLineOne">
+                        Hello Guest
+                    </span>
+                    <span className="headerOptionLineTwo">
+                        Sign in
+                    </span>
                 </div>
                 <div className="headerOption">
-
+                <span className="headerOptionLineOne">
+                        Returns
+                    </span>
+                    <span className="headerOptionLineTwo">
+                        Orders
+                    </span>
                 </div>
                 <div className="headerOption">
-
+                    <span className="headerOptionLineOne">
+                        Your
+                    </span>
+                    <span className="headerOptionLineTwo">
+                        Prime
+                    </span>
                 </div>
             </div>
         </div>
