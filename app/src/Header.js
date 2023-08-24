@@ -10,7 +10,7 @@ function Header() {
                 <input className="headerSearchInput" type="text" />
             </div>
             <div className="headerNav">
-                <div className="headerOptsion">
+                <div className="headerOption">
 
                 </div>
                 <div className="headerOption">
