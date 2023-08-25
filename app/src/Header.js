@@ -5,7 +5,7 @@ import logo from './images/logo.jpg'
 function Header() {
     return (
         <div className="header">
-            <img src={logo} alt="investazon logo" />
+            <img className="headerLogo" src={logo} alt="investazon logo" />
             <div className="headerSearch">
                 <input className="headerSearchInput" type="text" />
             </div>
