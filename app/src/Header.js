@@ -1,7 +1,6 @@
 import React from 'react'
 import './Header.css'
 import logo from './images/logo.jpg'
-import { FileDownload } from "@mui/icons-material";
 import SearchIcon from '@mui/icons-material/Search';
 import ShoppingCartCheckoutIcon from '@mui/icons-material/ShoppingCartCheckout';
 
