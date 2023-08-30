@@ -24,7 +24,7 @@ function Header() {
                     </span>
                 </div>
                 <div className="headerOption">
-                <span className="headerOptionLineOne">
+                    <span className="headerOptionLineOne">
                         Returns
                     </span>
                     <span className="headerOptionLineTwo">

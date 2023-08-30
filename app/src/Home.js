@@ -6,18 +6,17 @@ function Home() {
   return (
     <div className="home">
       <div className="homeContainer">
-
-        <div className="homeRow">
-          <Stock />
-        </div>
-        <div className="homeRow">
-          
-        </div>
-        <div className="homeRow">
-          
+        <Stock />
+        <Stock />
+        <Stock />
+        <Stock />
+        <Stock />
+        <Stock />
+        <Stock />
+        <Stock />
+        <Stock />
         </div>
       </div>
-    </div>
   )
 }
 
