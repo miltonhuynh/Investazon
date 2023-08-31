@@ -26,7 +26,7 @@ function Home() {
     key={single.id}
     company={single.company}
     ticker={single.ticker}
-    price={single.image}  
+    price={single.price}  
   />
 );
 
