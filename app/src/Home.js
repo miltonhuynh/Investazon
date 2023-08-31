@@ -6,15 +6,7 @@ function Home() {
   return (
     <div className="home">
       <div className="homeContainer">
-        <Stock />
-        <Stock />
-        <Stock />
-        <Stock />
-        <Stock />
-        <Stock />
-        <Stock />
-        <Stock />
-        <Stock />
+        <Stock company="Apple" ticker="AAPL" price="300"/>
         </div>
       </div>
   )

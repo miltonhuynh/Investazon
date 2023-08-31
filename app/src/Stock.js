@@ -1,14 +1,15 @@
 import React from 'react'
 import './Stock.css'
 
-function Stock() {
+function Stock({company, ticker, price}) {
   return (
     <div className="stock">
       <div className="stockInfo">
-        <p>Stock name placeholder</p>
+        <p>{company}</p>
+        <p>{ticker}</p>
         <p className="stockPrice">
             <small>$</small>
-            <strong>350</strong>
+            <strong>{price}</strong>
         </p>
       </div>
 
