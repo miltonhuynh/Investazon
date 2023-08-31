@@ -4,6 +4,16 @@ import Stock from './Stock';
 
 function Home() {
 
+  const finnhub = require('finnhub');
+
+  const api_key = finnhub.ApiClient.instance.authentications['api_key'];
+  api_key.apiKey = "cjog0q9r01qlfp4fjg7gcjog0q9r01qlfp4fjg80"
+  const finnhubClient = new finnhub.DefaultApi()
+
+  finnhubClient.quote("AAPL", (error, data, response) => {
+    console.log(data)
+  });
+
   const Items = [
     {
       "id":1,
@@ -16,6 +26,24 @@ function Home() {
       "company":"Google",
       "ticker":"GOOG",
       "price": 500
+    },
+    {
+      "id": 3,
+      "company":"Microsoft",
+      "ticker":"MSFT",
+      "price": 200
+    },
+    {
+      "id": 4,
+      "company":"Netflix",
+      "ticker":"NFLX",
+      "price": 700
+    },
+    {
+      "id": 5,
+      "company":"Amazon",
+      "ticker":"AMZN",
+      "price": 800
     }
   ]
 
