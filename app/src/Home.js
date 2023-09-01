@@ -4,7 +4,7 @@ import Stock from './Stock';
 
 function Home() {
 
- 
+
   
 
   const Items = [
