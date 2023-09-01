@@ -1,62 +1,53 @@
-import React from 'react'
+import React from 'react';
 import "./Home.css"
 import Stock from './Stock';
 
 function Home() {
 
-  const finnhub = require('finnhub');
-
-const api_key = finnhub.ApiClient.instance.authentications['api_key'];
-api_key.apiKey = "cjon5epr01qlfp4fn620cjon5epr01qlfp4fn62g"
-const finnhubClient = new finnhub.DefaultApi()
-
-finnhubClient.symbolSearch('AAPL', (error, data, response) => {
-  console.log(data)
-});
+ 
+  
 
   const Items = [
     {
-      "id":1,
-      "company":"Apple",
-      "ticker":"AAPL",
-      "price": 300
+      "id": 1,
+      "company": "Apple",
+      "ticker": "AAPL",
+      "price": 1
     },
     {
-      "id":2,
-      "company":"Google",
-      "ticker":"GOOG",
-      "price": 500
+      "id": 2,
+      "company": "Google",
+      "ticker": "GOOG",
+      "price": 2
     },
     {
       "id": 3,
-      "company":"Microsoft",
-      "ticker":"MSFT",
-      "price": 200
+      "company": "Microsoft",
+      "ticker": "MSFT",
+      "price": 3
     },
     {
       "id": 4,
-      "company":"Netflix",
-      "ticker":"NFLX",
-      "price": 700
+      "company": "Netflix",
+      "ticker": "NFLX",
+      "price": 4
     },
     {
       "id": 5,
-      "company":"Amazon",
-      "ticker":"AMZN",
-      "price": 800
+      "company": "Amazon",
+      "ticker": "AMZN",
+      "price": 5
     }
   ]
 
-  console.log(Items)
-
   const StocksList = Items.map((single) =>
-  <Stock
-    key={single.id}
-    company={single.company}
-    ticker={single.ticker}
-    price={single.price}  
-  />
-);
+    <Stock
+      key={single.id}
+      company={single.company}
+      ticker={single.ticker}
+      price={single.price}
+    />
+  );
 
   return (
     <div className="home">
@@ -65,8 +56,8 @@ finnhubClient.symbolSearch('AAPL', (error, data, response) => {
         <Stock company="Google" ticker="GOOG" price="500"/>
         </div>
   */}
-    {StocksList}
-      </div>
+      {StocksList}
+    </div>
   )
 }
 
