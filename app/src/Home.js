@@ -39,7 +39,28 @@ function Home() {
       "ticker": "AMZN",
       "price": 138.12,
       "image": "amazonLogo.svg"
-    }
+    },
+    {
+      "id": 6,
+      "company": "Tesla",
+      "ticker": "TSLA",
+      "price": 245.02,
+      "image": "teslaLogo.png"
+    },
+    {
+      "id": 7,
+      "company": "Meta",
+      "ticker": "META",
+      "price": 296.38,
+      "image": "metaLogo.png"
+    },
+    {
+      "id": 8,
+      "company": "Nvidia",
+      "ticker": "NVDA",
+      "price": 485.09,
+      "image": "nvidiaLogo.png"
+    },
   ]
 
   const StocksList = Items.map((single) =>

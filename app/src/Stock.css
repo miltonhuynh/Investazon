@@ -6,14 +6,13 @@
     margin: 30px;
     padding: 20px;
     width: 250px;
-    height: 400px;
+    height: 350px;
     background-color: white;
     z-index: 1;
 }
 
 #stock > img {
-    object-fit: contain;
-    margin-bottom: 15px;
+    margin: 5px;
     min-height: 60%;
 }
 
@@ -26,16 +25,16 @@
 }
 
 #companyName {
-    margin-top: 10px;
-    font-size: 20px;
+    margin-top: 8px;
+    font-size: 18px;
 }
 
 #ticker {
-    font-size: 40px;
+    font-size: 35px;
     margin-top: 5px;
 }
 
 #price {
-    font-size: 25px;
+    font-size: 28px;
     margin-bottom: 10px;
 }
