@@ -11,35 +11,35 @@ function Home() {
       "ticker": "AAPL",
       "price": 183.47,
       "image": "applelogo.png"
-    }/*,
+    },
     {
       "id": 2,
       "company": "Google",
       "ticker": "GOOG",
       "price": 136.84,
-      "image": {appleLogo}
+      "image": "googleLogo.svg"
     },
     {
       "id": 3,
       "company": "Microsoft",
       "ticker": "MSFT",
       "price": 328.66,
-      "image": {appleLogo}
+      "image": "microsoftLogo.png"
     },
     {
       "id": 4,
       "company": "Netflix",
       "ticker": "NFLX",
       "price": 439.88,
-      "image": {appleLogo}
+      "image": "netflixLogo.png"
     },
     {
       "id": 5,
       "company": "Amazon",
       "ticker": "AMZN",
       "price": 138.12,
-      "image": {appleLogo}
-    }*/
+      "image": "amazonLogo.svg"
+    }
   ]
 
   const StocksList = Items.map((single) =>

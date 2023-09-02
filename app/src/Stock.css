@@ -14,9 +14,10 @@
 
 #stock > img {
     max-height: 200px;
-    width: 100%;
+    min-width: 50%;
     object-fit: contain;
     margin-bottom: 15px;
+    min-height: 60%;
 }
 
 #stock > button {
