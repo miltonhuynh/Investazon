@@ -1,7 +1,6 @@
 import React from 'react';
 import "./Home.css"
 import Stock from './Stock';
-import appleLogo from './images/appleLogo.png'
 
 function Home() {
 
@@ -11,7 +10,7 @@ function Home() {
       "company": "Apple",
       "ticker": "AAPL",
       "price": 183.47,
-      "image": "\"./images/appleLogo.png\""
+      "image": "applelogo.png"
     }/*,
     {
       "id": 2,
