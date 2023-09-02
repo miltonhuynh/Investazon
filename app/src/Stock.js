@@ -11,11 +11,9 @@ function Stock({company, ticker, price, image}) {
 
   return (
     <div id="stock">
-      <div id="stockInfo">
-        <p>{company}</p>
-        <p id="ticker">{ticker}</p>
-        <p id="price">${price}</p>
-      </div>
+      <p id="name">{company}</p>
+      <p id="ticker">{ticker}</p>
+      <p id="price">${price}</p>
       <img src={image} alt="logo of company"/>
       <button>Add to basket</button>
     </div>
