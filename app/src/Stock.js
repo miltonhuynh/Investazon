@@ -11,7 +11,7 @@ function Stock({company, ticker, price, image}) {
 
   return (
     <div id="stock">
-      <p id="name">{company}</p>
+      <p id="companyName">{company}</p>
       <p id="ticker">{ticker}</p>
       <p id="price">${price}</p>
       <img src={image} alt="logo of company"/>
