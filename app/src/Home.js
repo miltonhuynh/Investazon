@@ -12,31 +12,31 @@ function Home() {
       "id": 1,
       "company": "Apple",
       "ticker": "AAPL",
-      "price": 1
+      "price": 183.47
     },
     {
       "id": 2,
       "company": "Google",
       "ticker": "GOOG",
-      "price": 2
+      "price": 136.84
     },
     {
       "id": 3,
       "company": "Microsoft",
       "ticker": "MSFT",
-      "price": 3
+      "price": 328.66
     },
     {
       "id": 4,
       "company": "Netflix",
       "ticker": "NFLX",
-      "price": 4
+      "price": 439.88
     },
     {
       "id": 5,
       "company": "Amazon",
       "ticker": "AMZN",
-      "price": 5
+      "price": 138.12
     }
   ]
 
