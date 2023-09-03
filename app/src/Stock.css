@@ -9,6 +9,13 @@
     height: 350px;
     background-color: white;
     z-index: 1;
+    transition: 0.3s;
+}
+
+#stock:hover {
+    transform: translateY(-10px);
+    box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.5);
+    transform: translateY(-10px);
 }
 
 #stock > img {
