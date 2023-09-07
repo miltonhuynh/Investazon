@@ -11,16 +11,18 @@ function Checkout() {
  
   return (
     <div id="checkout">
-      <h2 id="checkoutTitle">Your shopping Basket</h2>
-      {basket.map(item => (
-        <CheckoutProduct
-          id={item.id}
-          company={item.company}
-          ticker={item.ticker}
-          price={item.price}
-          image={item.image}
-        />
-      ))}
+      <div id="checkoutLeft">
+        <h2 id="checkoutTitle">Your shopping Basket</h2>
+        {basket.map(item => (
+          <CheckoutProduct
+            id={item.id}
+            company={item.company}
+            ticker={item.ticker}
+            price={item.price}
+            image={item.image}
+          />
+        ))}
+        </div>
       <div id="checkoutRight">
         <h2>
           <Subtotal />
