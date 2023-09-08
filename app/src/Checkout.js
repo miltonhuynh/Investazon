@@ -12,7 +12,7 @@ function Checkout() {
   return (
     <div id="checkout">
       <div id="checkoutLeft">
-        <h2 id="checkoutTitle">Your shopping Basket</h2>
+        <h2 id="checkoutTitle">Your portfolio Basket</h2>
         {basket.map(item => (
           <CheckoutProduct
             id={item.id}

@@ -1,17 +1,20 @@
 import React from 'react'
 
-function CheckoutProduct({ id, image, title, price }) {
+function CheckoutProduct({ id, company, image, ticker, price }) {
 
 
   return (
-    <div id="checkoutProduct">
-      <img id="checkoutProductImage" src={image} />
-      <div id="checkoutProductInfo">
-        <p id="checkoutProductTitle">
-          {title}
+    <div id="checkoutStock">
+      <img id="checkoutStockImage" src={image} />
+      <div id="checkoutStockInfo">
+      <p id="checkoutStockCompany">
+          Company: {company}
         </p>
-        <p id="checkoutProductPrice">
-          <small>$</small>
+        <p id="checkoutStockTicker">
+          Ticker: {ticker}
+        </p>
+        <p id="checkoutStockPrice">Price per share: 
+          <small> $</small>
           <strong>{price}</strong>
         </p>
         <button>Remove from Basket</button>
