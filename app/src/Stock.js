@@ -1,16 +1,16 @@
 import React from 'react'
 import './Stock.css'
 import { useStateValue } from "./StateProvider"
-function Stock({id, company, ticker, price, image}) {
+function Stock({stockId, company, ticker, price, image}) {
 
   const [{basket}, dispatch] = useStateValue();
   console.log(basket)
 
   const addToBasket = () => {
     dispatch({
-      type: 'ADD_TO_BASKET',
+      type: 'addBasket',
       item: {
-        id: id,
+        stockId: stockId,
         company: company,
         ticker: ticker,
         price: price,

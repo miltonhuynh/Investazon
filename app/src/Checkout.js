@@ -15,7 +15,7 @@ function Checkout() {
         <h2 id="checkoutTitle">Your portfolio Basket</h2>
         {basket.map(item => (
           <CheckoutProduct
-            id={item.id}
+            id={item.stockId}
             company={item.company}
             ticker={item.ticker}
             price={item.price}

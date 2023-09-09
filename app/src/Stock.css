@@ -32,12 +32,12 @@
 }
 
 #companyName {
-    font-size: 18px;
+    font-size: 1.5rem;
 }
 
 #ticker {
-    font-size: 35px;
-    margin-top: 5px;
+    font-size: 2.5rem;
+    margin-top: 0.2rem;
 }
 
 #price {
