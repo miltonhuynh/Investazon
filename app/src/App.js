@@ -11,6 +11,7 @@ function App() {
       <Header />
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/Login" element={<h1>Login page placeholder</h1>} />
           <Route path="/Checkout" element={<Checkout />}>
           </Route>
         </Routes>

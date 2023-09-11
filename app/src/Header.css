@@ -39,6 +39,7 @@
     margin-left: 10px;
     margin-right: 10px;
     color: white;
+    cursor: pointer;
 }
 
 .headerNav {
@@ -64,4 +65,8 @@
 .headerBasketCount {
     margin-left: 10px;
     margin-right: 10px;
+}
+
+#loginLink {
+    color: white;
 }

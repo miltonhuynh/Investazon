@@ -20,14 +20,15 @@ function Header() {
                 <SearchIcon className="headerSearchIcon" />
             </div>
             <div className="headerNav">
-
                 <div className="headerOption">
                     <span className="headerOptionLineOne">
                         Hello Guest
                     </span>
-                    <span className="headerOptionLineTwo">
-                        Sign in
-                    </span>
+                    <Link to="/login">
+                        <span className="headerOptionLineTwo" id="loginLink">
+                            Sign in
+                        </span> 
+                    </Link>
                 </div>
                 <div className="headerOption">
                     <span className="headerOptionLineOne">
