@@ -1,6 +1,7 @@
 import React from 'react';
 import "./Home.css"
 import Stock from './Stock';
+import Header from './Header';
 
 function Home() {
 
@@ -74,9 +75,12 @@ function Home() {
   );
 
   return (
-    <div className="home">
-      {StocksList}
-    </div>
+    <>
+    <Header />
+      <div className="home">
+        {StocksList}
+      </div>
+    </>
   )
 }
 
