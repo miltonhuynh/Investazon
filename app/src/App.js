@@ -3,6 +3,7 @@ import Header from './Header';
 import Home from './Home';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Checkout from './Checkout';
+import Login from './Login';
 
 function App() {
   return (
@@ -10,7 +11,7 @@ function App() {
       <div className="App">
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/Login" element={<h1>Login page placeholder</h1>} />
+          <Route path="/Login" element={<Login />} />
           <Route path="/Checkout" element={<Checkout />}>
           </Route>
         </Routes>
