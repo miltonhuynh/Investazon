@@ -20,7 +20,6 @@ function Login() {
 
                 <button id="signInButton">Sign-in</button>
             </form>
-            <p>disclaimer</p>
             <button id="registerButton">Create your Investazon account</button>
         </div>
     </div>
