@@ -11,6 +11,10 @@ function Login() {
   const signIn = e => {
     e.preventDefault()
   }
+
+  const register = e => {
+    e.preventDefault()
+  }
   
   return (
     <div id="login">
@@ -28,7 +32,7 @@ function Login() {
 
                 <button type="submit" onClick={signIn} id="signInButton">Sign-in</button>
             </form>
-            <button id="registerButton">Create your Investazon account</button>
+            <button id="registerButton" conClick={register}>Create your Investazon account</button>
         </div>
     </div>
   )
