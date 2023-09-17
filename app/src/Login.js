@@ -1,17 +1,24 @@
 import { React, useState } from 'react'
 import './index.css'
 import loginLogo from './images/loginLogo.jpg'
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import { auth } from "./firebase"
 
 
 function Login() {
 
+  const navigate = useNavigate()
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
 
   const signIn = e => {
     e.preventDefault()
+    auth
+    .signInWithEmailAndPassword(email, password)
+    .then(auth => {
+      navigate('/')
+    })
+    .catch(error => alert(/*error.message*/"Invalid login credentials, please try again."))
   }
 
   const register = e => {
@@ -20,6 +27,9 @@ function Login() {
       .createUserWithEmailAndPassword(email, password)
       .then((auth) => {
         console.log(auth)
+        if(auth) {
+          navigate('/')
+        }
       })
       .catch(error => alert(error.message))
   }
@@ -40,7 +50,7 @@ function Login() {
 
           <button type="submit" onClick={signIn} id="signInButton">Sign-in</button>
         </form>
-        <button id="registerButton" conClick={register}>Create your Investazon account</button>
+        <button id="registerButton" onClick={register}>Create your Investazon account</button>
       </div>
     </div>
   )

@@ -72,6 +72,7 @@ code {
   height: 30px;
   border: 1px solid #a88734 #9c7e31 #846a29;;
   margin-top: 10px;
+  cursor: pointer;
 } 
 
 #registerButton {
@@ -80,4 +81,5 @@ code {
   height: 30px;
   border: 1px solid lightgray;
   margin-top: 10px;
+  cursor: pointer;
 }
