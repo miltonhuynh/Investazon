@@ -15,12 +15,6 @@ function Header() {
         }
     }
 
-    let userEmail = "";
-
-    if (user && user._delegate && user._delegate.email) {
-        userEmail = user._delegate.email.split('@')[0];;
-    }
-
     return (
         <div className="header">
             <Link to="/">
@@ -33,7 +27,7 @@ function Header() {
             <div className="headerNav">
                 <div onClick={handleAuthentication} className="headerOption">
                     <span className="headerOptionLineOne">
-                        Hello {user ? userEmail : 'Guest'}
+                        Hello {user ? user?.email.split('@')[0] : 'Guest'}
                     </span>
                     <Link to={!user && "/login"}>
                         <span className="headerOptionLineTwo" id="loginLink">
