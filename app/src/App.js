@@ -8,11 +8,10 @@ import { auth } from "./firebase"
 import { useStateValue } from "./StateProvider"
 
 function App() {
-  const[{basket},dispatch] = useStateValue()
+  const[, dispatch] = useStateValue()
 
   useEffect(() => {
     auth.onAuthStateChanged(authUser => {
-      console.log("the user is", authUser)
       if(authUser) {
         dispatch({
           type: 'SET_USER',
