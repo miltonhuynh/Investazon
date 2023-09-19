@@ -3,8 +3,7 @@ import './Stock.css'
 import { useStateValue } from "./StateProvider"
 function Stock({stockId, company, ticker, price, image}) {
 
-  const [{basket}, dispatch] = useStateValue();
-  console.log(basket)
+  const [, dispatch] = useStateValue();
 
   const addToBasket = () => {
     dispatch({
