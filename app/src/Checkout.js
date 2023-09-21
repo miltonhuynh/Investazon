@@ -8,14 +8,13 @@ import Header from './Header';
 
 function Checkout() {
 
-  const [{ basket, user }] = useStateValue();
+  const [{basket}] = useStateValue();
  
   return (
     <>
       <Header />
       <div id="checkout">
         <div id="checkoutLeft">
-          <h3>Hello {user?.email.split('@')[0]},</h3>
           <h2 id="checkoutTitle">Your portfolio Basket</h2>
           {basket.map(item => (
             <CheckoutProduct
