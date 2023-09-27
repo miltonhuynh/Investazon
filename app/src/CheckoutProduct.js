@@ -23,7 +23,6 @@ function CheckoutProduct({ stockId, company, image, ticker, price }) {
         <p id="checkoutStockTicker">
           Ticker: {ticker}
         </p>
-        <p>Stock ID: {stockId}</p>
         <p id="checkoutStockPrice">Price per share: 
           <small> $</small>
           <strong>{price}</strong>

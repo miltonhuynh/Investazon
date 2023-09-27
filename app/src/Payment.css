@@ -1,0 +1,8 @@
+#paymentPage {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: white;
+    height: max-content;
+    min-height: 100vh;
+}
