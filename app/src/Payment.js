@@ -2,6 +2,7 @@ import React from 'react'
 import Header from './Header';
 import { useStateValue } from './StateProvider';
 import CheckoutProduct from './CheckoutProduct';
+import { Link } from "react-router-dom"
 import "./Payment.css"
 
 
@@ -13,6 +14,11 @@ function Payment() {
       <Header />
       <div id="paymentPage">
         <div className="paymentContainer">
+          <h1>
+            Checkout (
+              <Link to="/checkout">{basket?.length} items</Link>
+            )
+          </h1>
           <div className="paymentSection">
             <div className="paymentTitle">
               <h3>Delivery Address</h3>
@@ -39,7 +45,12 @@ function Payment() {
             </div>
           </div>
           <div className="paymentSection">
-
+              <div className="paymentTitle">
+                <h3>Payment Method</h3>
+              </div>
+              <div className="paymentDetails">
+                {/* Stripe */}
+              </div>
           </div>
         </div>
       </div>
