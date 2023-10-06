@@ -13,6 +13,14 @@ function Payment() {
   const stripe = useStripe();
   const elements = useElements();
 
+  const handleSubmit = e => {
+
+  }
+
+  const handleChange = e => {
+    
+  }
+
   return (
     <>
       <Header />
@@ -54,8 +62,8 @@ function Payment() {
               </div>
               <div className="paymentDetails">
                 {/* Stripe */}
-                <form>
-                  
+                <form onSubmit={handleSubmit}>
+                  <CardElement onChange={handleChange}/>
                 </form>
               </div>
           </div>

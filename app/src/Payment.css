@@ -26,6 +26,7 @@
     flex: 0.2
 }
 
-.paymentAddress {
+.paymentAddress, .paymentItems, .paymentDetails {
     flex: 0.8
 }
+
