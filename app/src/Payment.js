@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Header from './Header';
 import { useStateValue } from './StateProvider';
 import CheckoutProduct from './CheckoutProduct';
@@ -13,12 +13,16 @@ function Payment() {
   const stripe = useStripe();
   const elements = useElements();
 
+  const [error, setError] = useState(null)
+  const [disabled, setDisabled] = useState(true)
+
   const handleSubmit = e => {
 
   }
 
   const handleChange = e => {
-    
+    setDisabled(event.empty)
+    setError(event.error ? event.error.message : "") 
   }
 
   return (
@@ -64,6 +68,9 @@ function Payment() {
                 {/* Stripe */}
                 <form onSubmit={handleSubmit}>
                   <CardElement onChange={handleChange}/>
+                  <div className="paymentPriceContainer">
+                    
+                  </div>
                 </form>
               </div>
           </div>
