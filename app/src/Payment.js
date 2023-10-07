@@ -5,6 +5,9 @@ import CheckoutProduct from './CheckoutProduct';
 import { Link } from "react-router-dom"
 import "./Payment.css"
 import { CardElement, useStripe, useElements } from '@stripe/react-stripe-js';
+import CurrencyFormat from "react-currency-format"
+import { getBasketTotal } from './reducer';
+
 
 
 function Payment() {
@@ -13,6 +16,8 @@ function Payment() {
   const stripe = useStripe();
   const elements = useElements();
 
+  const [succeded, setSucceded] = useState(false)
+  const [processing, setProcessing] = useState("")
   const [error, setError] = useState(null)
   const [disabled, setDisabled] = useState(true)
 
@@ -21,8 +26,9 @@ function Payment() {
   }
 
   const handleChange = e => {
-    setDisabled(event.empty)
-    setError(event.error ? event.error.message : "") 
+    // changed event to e
+    setDisabled(e.empty)
+    setError(e.error ? e.error.message : "")
   }
 
   return (
@@ -32,7 +38,7 @@ function Payment() {
         <div className="paymentContainer">
           <h1>
             Checkout (
-              <Link to="/checkout">{basket?.length} items</Link>
+            <Link to="/checkout">{basket?.length} items</Link>
             )
           </h1>
           <div className="paymentSection">
@@ -61,18 +67,32 @@ function Payment() {
             </div>
           </div>
           <div className="paymentSection">
-              <div className="paymentTitle">
-                <h3>Payment Method</h3>
-              </div>
-              <div className="paymentDetails">
-                {/* Stripe */}
-                <form onSubmit={handleSubmit}>
-                  <CardElement onChange={handleChange}/>
-                  <div className="paymentPriceContainer">
-                    
-                  </div>
-                </form>
-              </div>
+            <div className="paymentTitle">
+              <h3>Payment Method</h3>
+            </div>
+            <div className="paymentDetails">
+              {/* Stripe */}
+              <form onSubmit={handleSubmit}>
+                <CardElement onChange={handleChange} />
+                <div className="paymentPriceContainer">
+                  <CurrencyFormat
+                    renderText={(value) => (
+                      <>
+                        <h3>Order Total: {value}</h3>
+                      </>
+                    )}
+                    decimalScale={2}
+                    value={getBasketTotal(basket)}
+                    displayType={"text"}
+                    thousandSeperator={true}
+                    prefix={"$"}
+                  />
+                  <button disabled={processing || disabled || succeded}>
+                    <span>{processing ? <p>Processing</p> : "Buy Now"}</span>
+                  </button>
+                </div>
+              </form>
+            </div>
           </div>
         </div>
       </div>
