@@ -21,7 +21,7 @@ function Payment() {
   const [error, setError] = useState(null)
   const [disabled, setDisabled] = useState(true)
 
-  const handleSubmit = e => {
+  const handleSubmit = async (event) => {
 
   }
 
