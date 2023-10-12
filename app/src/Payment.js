@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Header from './Header';
 import { useStateValue } from './StateProvider';
 import CheckoutProduct from './CheckoutProduct';
@@ -20,9 +20,18 @@ function Payment() {
   const [processing, setProcessing] = useState("")
   const [error, setError] = useState(null)
   const [disabled, setDisabled] = useState(true)
+  const [clientSecret, setClientSecret] = useState(true)
+
+  useEffect(() => {
+    // generate stripe
+  }, [basket])
+
 
   const handleSubmit = async (event) => {
+    event.preventDefault()
+    setProcessing(true)
 
+    // const payload = await stripe
   }
 
   const handleChange = e => {
