@@ -23,7 +23,10 @@ function Payment() {
   const [clientSecret, setClientSecret] = useState(true)
 
   useEffect(() => {
-    // generate stripe
+    const getClientSecret = async () => {
+      const response = await axios
+    }
+    getClientSecret()
   }, [basket])
 
 
