@@ -7,6 +7,7 @@ import "./Payment.css"
 import { CardElement, useStripe, useElements } from '@stripe/react-stripe-js';
 import CurrencyFormat from "react-currency-format"
 import { getBasketTotal } from './reducer';
+import axios from 'axios';
 
 
 
@@ -26,8 +27,8 @@ function Payment() {
     const getClientSecret = async () => {
       const response = await axios({
         method: 'post',
-        url: `/payments/create?total=${getBasketTotal(basket)}`
-      }
+        url: `/payments/create?total=${getBasketTotal(basket) * 100}`
+      })
     }
     getClientSecret()
   }, [basket])
