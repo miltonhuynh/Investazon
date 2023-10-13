@@ -24,7 +24,10 @@ function Payment() {
 
   useEffect(() => {
     const getClientSecret = async () => {
-      const response = await axios
+      const response = await axios({
+        method: 'post',
+        url: `/payments/create?total=${getBasketTotal(basket)}`
+      }
     }
     getClientSecret()
   }, [basket])
